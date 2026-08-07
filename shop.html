@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shop — RK Online Store.lk</title>
+<meta name="description" content="Browse categories at RK Online Store.lk — electronics, fashion, home & living, beauty and more. Message us on WhatsApp to order.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="nav wrap">
+    <a class="brand" href="index.html">
+      <img src="assets/logo.png" alt="RK Online Store.lk logo">
+      <div class="brand-text"><b>RK ONLINE STORE.LK</b><span>Shop More · Pay Less</span></div>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html" class="active">Shop</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="navlinks">
+      <a class="btn btn-orange" href="https://wa.me/94756789046" target="_blank" rel="noopener">Order on WhatsApp</a>
+      <button class="mobile-toggle" onclick="openDrawer()" aria-label="Open menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-drawer" id="mobileDrawer">
+  <div class="drawer-panel">
+    <button class="close-drawer" onclick="closeDrawer()" aria-label="Close menu">✕</button>
+    <ul>
+      <li><a href="index.html" onclick="closeDrawer()">Home</a></li>
+      <li><a href="shop.html" onclick="closeDrawer()">Shop</a></li>
+      <li><a href="about.html" onclick="closeDrawer()">About</a></li>
+      <li><a href="faq.html" onclick="closeDrawer()">FAQ</a></li>
+      <li><a href="contact.html" onclick="closeDrawer()">Contact</a></li>
+    </ul>
+    <a class="btn btn-orange" href="https://wa.me/94756789046" target="_blank" rel="noopener" style="justify-content:center;">Order on WhatsApp</a>
+  </div>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="wrap">
+    <div class="breadcrumb"><a href="index.html">Home</a> <span>/</span> <span>Shop</span></div>
+    <div class="speedlines" style="margin-bottom:14px;"><span></span><span></span><span></span></div>
+    <h1>Shop by category</h1>
+    <p>Here's a taste of what RK Online Store.lk stocks. Full catalogue, live stock and exact pricing are shared over WhatsApp — tap any item to ask.</p>
+  </div>
+</section>
+
+<!-- FILTER + PRODUCTS -->
+<section class="section" style="padding-top:0;">
+  <div class="wrap">
+    <div class="filter-bar">
+      <button class="chip active" onclick="filterProducts('all', this)">All</button>
+      <button class="chip" onclick="filterProducts('electronics', this)">Electronics</button>
+      <button class="chip" onclick="filterProducts('fashion', this)">Fashion</button>
+      <button class="chip" onclick="filterProducts('home', this)">Home &amp; Living</button>
+      <button class="chip" onclick="filterProducts('beauty', this)">Beauty</button>
+      <button class="chip" onclick="filterProducts('kids', this)">Kids &amp; Baby</button>
+      <button class="chip" onclick="filterProducts('gifts', this)">Gifts</button>
+    </div>
+
+    <div class="product-grid">
+
+      <div class="product-card" data-cat="electronics">
+        <div class="product-img"><span class="product-tag">Popular</span>📱</div>
+        <div class="product-info">
+          <span class="cat">Electronics</span>
+          <h3>Wireless Earbuds</h3>
+          <p>Compact wireless earbuds with charging case — great for calls and music on the go.</p>
+          <div class="product-foot">
+            <div class="product-price">Message us<span>for price</span></div>
+            <button class="btn btn-orange btn-sm" onclick="orderProduct('Wireless Earbuds')">Ask</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="electronics">
+        <div class="product-img">🔌</div>
+        <div class="product-info">
+          <span class="cat">Electronics</span>
+          <h3>Fast-Charge Cable &amp; Adapter Set</h3>
+          <p>Durable charging cable with wall adapter, compatible with most phones.</p>
+          <div class="product-foot">
+            <div class="product-price">Message us<span>for price</span></div>
+            <button class="btn btn-orange btn-sm" onclick="orderProduct('Fast-Charge Cable & Adapter Set')">Ask</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="fashion">
+        <div class="product-img"><span class="product-tag">New</span>👕</div>
+        <div class="product-info">
+          <span class="cat">Fashion</span>
+          <h3>Everyday Cotton Tee</h3>
+          <p>Soft, breathable cotton t-shirt in multiple colours and sizes.</p>
+          <div class="product-foot">
+            <div class="product-price">Message us<span>for price</span></div>
+            <button class="btn btn-orange btn-sm" onclick="orderProduct('Everyday Cotton Tee')">Ask</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="fashion">
+        <div class="product-img">👜</div>
+        <div class="product-info">
+          <span class="cat">Fashion</span>
+          <h3>Everyday Tote Bag</h3>
+          <p>Spacious, lightweight tote for daily use, work or travel.</p>
+          <div class="product-foot">
+            <div class="product-price">Message us<span>for price</span></div>
+            <button class="btn btn-orange btn-sm" onclick="orderProduct('Everyday Tote Bag')">Ask</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="home">
+        <div class="product-img"><span class="product-tag">Popular</span>🍳</div>
+        <div class="product-info">
+          <span class="cat">Home &amp; Living</span>
+          <h3>Non-Stick Cookware Set</h3>
+          <p>Everyday kitchen essentials built to last — easy to clean, easy to cook.</p>
+          <div class="product-foot">
+            <div class="product-price">Message us<span>for price</span></div>
+            <button class="btn btn-orange btn-sm" onclick="orderProduct('Non-Stick Cookware Set')">Ask</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="home">
+        <div class="product-img">🕯️</div>
+        <div class="product-info">
+          <span class="cat">Home &amp; Living</span>
+          <h3>Home Decor Essentials</h3>
+          <p>Simple decor pieces to freshen up any room in your home.</p>
+          <div class="product-foot">
+            <div class="product-price">Message us<span>for price</span></div>
+            <button class="btn btn-orange btn-sm" onclick="orderProduct('Home Decor Essentials')">Ask</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="beauty">
+        <div class="product-img"><span class="product-tag">New</span>💄</div>
+        <div class="product-info">
+          <span class="cat">Beauty</span>
+          <h3>Daily Skincare Set</h3>
+          <p>Cleanser, moisturiser and sunscreen bundle for everyday skincare.</p>
+          <div class="product-foot">
+            <div class="product-price">Message us<span>for price</span></div>
+            <button class="btn btn-orange btn-sm" onclick="orderProduct('Daily Skincare Set')">Ask</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="beauty">
+        <div class="product-img">💇</div>
+        <div class="product-info">
+          <span class="cat">Beauty</span>
+          <h3>Hair Care Essentials</h3>
+          <p>Shampoo, conditioner and hair treatment picks, priced fairly.</p>
+          <div class="product-foot">
+            <div class="product-price">Message us<span>for price</span></div>
+            <button class="btn btn-orange btn-sm" onclick="orderProduct('Hair Care Essentials')">Ask</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="kids">
+        <div class="product-img"><span class="product-tag">Popular</span>🧸</div>
+        <div class="product-info">
+          <span class="cat">Kids &amp; Baby</span>
+          <h3>Soft Toy Bundle</h3>
+          <p>Safe, cuddly toys for little ones — a favourite gift pick.</p>
+          <div class="product-foot">
+            <div class="product-price">Message us<span>for price</span></div>
+            <button class="btn btn-orange btn-sm" onclick="orderProduct('Soft Toy Bundle')">Ask</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="kids">
+        <div class="product-img">🍼</div>
+        <div class="product-info">
+          <span class="cat">Kids &amp; Baby</span>
+          <h3>Baby Care Essentials</h3>
+          <p>Everyday baby care items chosen for safety and comfort.</p>
+          <div class="product-foot">
+            <div class="product-price">Message us<span>for price</span></div>
+            <button class="btn btn-orange btn-sm" onclick="orderProduct('Baby Care Essentials')">Ask</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="gifts">
+        <div class="product-img"><span class="product-tag">Popular</span>🎁</div>
+        <div class="product-info">
+          <span class="cat">Gifts</span>
+          <h3>Curated Gift Box</h3>
+          <p>A handpicked mix of items, ready to gift for any occasion.</p>
+          <div class="product-foot">
+            <div class="product-price">Message us<span>for price</span></div>
+            <button class="btn btn-orange btn-sm" onclick="orderProduct('Curated Gift Box')">Ask</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="gifts">
+        <div class="product-img">🎉</div>
+        <div class="product-info">
+          <span class="cat">Gifts</span>
+          <h3>Seasonal Special Pack</h3>
+          <p>Limited seasonal picks — ask us what's currently available.</p>
+          <div class="product-foot">
+            <div class="product-price">Message us<span>for price</span></div>
+            <button class="btn btn-orange btn-sm" onclick="orderProduct('Seasonal Special Pack')">Ask</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <p style="text-align:center; color:#6b7280; font-size:13.5px; margin-top:36px;">Don't see what you're looking for? We add new stock every week — <a href="https://wa.me/94756789046" target="_blank" rel="noopener" style="color:var(--orange-500); font-weight:700;">ask us on WhatsApp</a>.</p>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<section style="padding:0 0 86px;">
+  <div class="cta-banner">
+    <h2>Can't find it? Just ask.</h2>
+    <p>Send us a message with what you need — we'll check stock and get back to you fast.</p>
+    <div class="cta-actions">
+      <a class="btn btn-navy" href="https://wa.me/94756789046" target="_blank" rel="noopener">💬 Ask on WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand"><img src="assets/logo.png" alt="RK Online Store.lk logo"><b>RK ONLINE STORE.LK</b></div>
+        <p style="font-size:13.5px; line-height:1.6; max-width:260px;">A trusted Sri Lankan online store bringing quality products to your doorstep. Shop more, pay less, live better.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Explore</h5>
+        <ul>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="faq.html">FAQ &amp; Policies</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="https://wa.me/94756789046" target="_blank" rel="noopener">+94 75 678 9046</a></li>
+          <li><a href="mailto:rksolution.lk@gmail.com">rksolution.lk@gmail.com</a></li>
+          <li>Piliyandala, Sri Lanka</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Follow</h5>
+        <ul>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">TikTok</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 RK Online Store.lk — All rights reserved.</span>
+      <span>Designed for RK Online Store.lk</span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/94756789046" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.004 2.003c-5.523 0-10 4.477-10 10 0 1.766.464 3.484 1.343 5.003L2 22l5.117-1.334A9.96 9.96 0 0012.004 22c5.523 0 10-4.477 10-10s-4.477-9.997-10-9.997zm5.783 15.783a8.24 8.24 0 01-5.783 2.383 8.23 8.23 0 01-4.184-1.147l-.3-.178-3.037.792.812-2.96-.196-.305a8.223 8.223 0 01-1.264-4.39c0-4.55 3.703-8.253 8.254-8.253 2.204 0 4.276.86 5.834 2.42a8.196 8.196 0 012.417 5.833c0 2.207-.86 4.28-2.553 5.805z"/></svg>
+</a>
+
+<script src="js/script.js"></script>
+</body>
+</html>
